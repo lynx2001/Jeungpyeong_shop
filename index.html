@@ -1,0 +1,119 @@
+<!doctype html>
+<!--
+  Tailwind CSS – MIT License
+
+  MIT License
+  Copyright (c) Tailwind Labs, Inc.
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of
+  this software and associated documentation files (the "Software"), to deal in the
+  Software without restriction, including without limitation the rights to use, copy,
+  modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so, subject to the
+  following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+  OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>증평상회</title>
+  <meta name="description" content="증평상회" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="증평상회" />
+  <meta property="og:description" content="증평상회" />
+  <meta property="og:image" content="./img/rice.png" />
+  <meta property="og:url" content="https://example.com" />
+  <link rel="icon" href="./img/favicon.svg" />
+  <!-- Tailwind CDN (간편 사용). 로컬 빌드시 제거 가능 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+  <!-- 헤더 -->
+  <header class="fixed inset-x-0 top-0 z-30 flex items-center justify-between px-5 md:px-8 py-4 mix-blend-difference">
+    <a href="#hero" class="text-white font-semibold tracking-wide">증평상회</a>
+    <nav class="hidden md:flex gap-6 text-white/90">
+      <a href="#about" class="hover:text-white">소개</a>
+      <a href="#visit" class="hover:text-white">방문</a>
+    </nav>
+  </header>
+
+  <!-- Hero 섹션: 타임랩스 영상 + 오버레이 + 카피 -->
+  <section id="hero" class="relative h-[100svh] w-full overflow-hidden hero-fallback">
+    <video id="heroVideo" class="absolute inset-0 h-full w-full object-cover" src="./video/rice.mp4" poster="./img/rice.png" autoplay muted loop playsinline></video>
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center text-white px-6">
+      <div class="max-w-2xl">
+        <h1 class="headline text-4xl md:text-6xl font-semibold leading-tight">증 평 상 회</h1>
+        <!--<p class="mt-5 text-white/85">曾坪商會</p>-->
+        <p class="mt-5 text-white/85">Since 1960</p>
+        <div class="mt-8 flex items-center justify-center gap-4">
+          <a href="#about" class="rounded-2xl px-6 py-3 bg-white text-black hover:bg-white/90 transition">소개</a>
+          <a href="tel:031-675-2719" class="rounded-2xl px-6 py-3 border border-white/70 text-white hover:bg-white/10 transition">전화</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시그니처/강점 섹션 -->
+  <section id="about" class="px-6 md:px-10 py-20 md:py-28">
+    <h2 class="text-2xl md:text-4xl font-semibold mb-8 reveal">우리의 시그니처</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl p-6 border border-neutral-200 reveal">
+        <h3 class="font-medium mb-2">쌀</h3>
+        <p class="text-neutral-600">산지부터 로스팅까지, 계절에 맞춘 블렌딩.</p>
+      </div>
+      <div class="rounded-2xl p-6 border border-neutral-200 reveal">
+        <h3 class="font-medium mb-2">잡곡</h3>
+        <p class="text-neutral-600">매일 소량 생산으로 신선함을 지킵니다.</p>
+      </div>
+      <div class="rounded-2xl p-6 border border-neutral-200 reveal">
+        <h3 class="font-medium mb-2">연탄</h3>
+        <p class="text-neural-600">빛과 여백, 사운드를 조율한 휴식의 밀도.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 방문 안내/지도 섹션 -->
+  <section id="visit" class="px-6 md:px-10 py-20 md:py-28 bg-neutral-50">
+    <h2 class="text-2xl md:text-4xl font-semibold mb-8 reveal">방문 안내</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-neutral-200 p-5 reveal">
+        <h3 class="font-medium">영업시간</h3>
+        <p class="text-neutral-600 mt-2">월–일 10:00–20:00</p>
+        <h3 class="font-medium mt-6">주소</h3>
+        <p class="text-neutral-600 mt-2">경기 안성시 장기로74번길 25</p>
+        <div class="mt-6 flex gap-3">
+          <a href="https://naver.me/Fbqu7jMb" target="_blank" class="rounded-xl px-4 py-2 border border-neutral-300 hover:bg-neutral-50">길찾기</a>
+          <a href="tel:031-675-2719" class="rounded-xl px-4 py-2 bg-black text-white hover:bg-black/90">전화문의</a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-neutral-200 reveal">
+        <iframe title="map" src="" class="w-full h-[320px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="px-6 md:px-10 py-12 border-t border-neutral-200 text-neutral-600">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div>© 1960-<span id="year"></span> 증평상회</div>
+      <div class="flex gap-4">
+        <a>대표번호 : 031-675-2719</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js" defer></script>
+
+</body>
+</html>

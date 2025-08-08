@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 배경 원 -->
+  <circle cx="256" cy="256" r="256" fill="#F6EBD9"/>
+  
+  <!-- 하이라이트/그라디언트 -->
+  <defs>
+    <radialGradient id="grain" cx="42%" cy="28%" r="72%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.98"/>
+      <stop offset="65%" stop-color="#F7F7F4" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#EEEDE9" stop-opacity="0.95"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- 쌀알(끝 날렵 + 약간 비대칭) -->
+  <path d="M256 68
+           C 200 104, 178 164, 176 254
+           C 174 336, 196 392, 236 430
+           C 246 440, 266 441, 278 432
+           C 316 404, 338 346, 336 254
+           C 334 170, 312 112, 256 68 Z"
+        fill="url(#grain)" stroke="#8B5E3C" stroke-width="8"/>
+  
+  <!-- 배젖(히럼) 결선 -->
+  <path d="M244 96
+           C 224 148, 220 360, 244 416"
+        fill="none" stroke="#A07450" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- 보조 결선 (오른쪽만 남김) -->
+  <path d="M274 124
+           C 268 196, 268 316, 274 388"
+        fill="none" stroke="#C19A75" stroke-width="6" stroke-linecap="round"/>
+</svg>
